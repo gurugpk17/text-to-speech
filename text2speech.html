@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text-to-Speech Conversion</title>
+</head>
+<body>
+  <h1>Text-to-Speech Conversion</h1>
+  <textarea id="textToSpeak" rows="4" cols="50">Hello, this is a sample text to convert to speech.</textarea>
+  <button onclick="speakText()">Speak</button>
+
+  <script>
+    function speakText() {
+      const textToSpeak = document.getElementById("textToSpeak").value;
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
